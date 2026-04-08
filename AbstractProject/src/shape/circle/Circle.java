@@ -1,8 +1,9 @@
 package shape.circle;
 
 import shape.Shape;
+import shape.colorable.Colorable;
 
-public class Circle extends Shape {
+public class Circle extends Shape implements Colorable {
     private double radius;
 
     public Circle() {
@@ -37,5 +38,10 @@ public class Circle extends Shape {
     @Override
     public String toString() {
         return "A Circle with radius = " + radius + ", which is a subclass of " + super.toString();
+    }
+
+    @Override
+    public void howtoColor() {
+        System.out.println("Hello howtoColor");
     }
 }
